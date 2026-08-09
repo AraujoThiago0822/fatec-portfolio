@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-steel;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-void text-paper font-body antialiased;
+  }
+  ::selection {
+    @apply bg-signal/30 text-paper;
+  }
+  :focus-visible {
+    outline: 2px solid theme('colors.signal.DEFAULT');
+    outline-offset: 3px;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs tracking-[0.2em] uppercase text-signal;
+  }
+  .bg-noise-grid {
+    background-image: theme('backgroundImage.grid');
+    background-size: theme('backgroundSize.grid');
+  }
+  .container-page {
+    @apply mx-auto w-full max-w-5xl px-6 sm:px-8;
+  }
+  .card {
+    @apply bg-carbon border border-steel rounded-xl transition-all duration-300;
+  }
+  .card:hover {
+    @apply border-signal/50;
+    transform: translateY(-4px);
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-signal px-5 py-2.5 text-sm font-semibold text-void transition-colors duration-200 hover:bg-signal-dim;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-full border border-steel px-5 py-2.5 text-sm font-semibold text-paper transition-colors duration-200 hover:border-signal hover:text-signal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

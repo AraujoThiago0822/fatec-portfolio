@@ -19,7 +19,7 @@ export const projects = [
     techs: ['HTML5', 'CSS3', 'JavaScript'],
     github: 'https://github.com/WebCrafters-ZL/streetwise-web',
     demo: '',
-    screenshots: [],
+    screenshots: ['/public/projects/streetwise/img1.png', '/public/projects/streetwise/img2.png'],
   },
   {
     slug: 'reciclaqui',
@@ -47,7 +47,6 @@ export const projects = [
     myRole:
       'Desenvolvimento de interface,construção dos módulos de frequência e notas e dashboards de acompanhamento .',
     techs: ['React', 'Javascript', 'Node.js', 'MongoDB'],
-    github: 'https://github.com/seu-usuario/academitrack',
     github: 'https://github.com/seu-usuario/academitrack',
     demo: '',
     screenshots: [],

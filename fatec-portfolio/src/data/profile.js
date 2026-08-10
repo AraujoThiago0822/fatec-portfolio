@@ -6,10 +6,10 @@
 export const profile = {
   name: 'ThiagoDev',
   role: 'Desenvolvedor(a) Multiplataforma',
-  photo: '/profile.jpg', // coloque sua foto em public/profile.jpg
+  photo: 'profile.jpeg', // coloque sua foto em public/profile.jpg
   github: 'https://github.com/AraujoThiago0822',
   linkedin: 'https://linkedin.com/in/seu-usuario', // opcional, deixe '' se não quiser mostrar
-  email: 'seuemail@exemplo.com',
+  email: 'thiago.araujo0822@gmail.com',
   location: 'São Paulo, SP',
 
   bio: 'Estudante de Desenvolvimento de Software Multiplataforma, apaixonado(a) por transformar problemas reais em produtos digitais — do frontend ao deploy. Gosto de projetos com impacto social e de código bem organizado.',

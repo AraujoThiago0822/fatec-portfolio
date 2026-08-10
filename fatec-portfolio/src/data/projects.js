@@ -34,7 +34,7 @@ export const projects = [
     techs: ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'Express', 'MySQL'],
     github: 'https://github.com/WebCrafters-ZL/recicleaqui',
     demo: '',
-    screenshots: [],
+    screenshots: ['/public/projects/recicleaqui/img3.png'],
   },
   {
     slug: 'academitrack',

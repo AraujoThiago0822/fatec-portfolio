@@ -49,7 +49,9 @@ export const projects = [
     techs: ['React', 'Javascript', 'Node.js', 'MongoDB'],
     github: 'https://github.com/seu-usuario/academitrack',
     demo: '',
-    screenshots: [],
+    screenshots: ['/public/projects/academitrack/img4.png',
+
+    ],
   },
   {
     slug: 'doefood',
@@ -64,7 +66,7 @@ export const projects = [
     techs: ['React','Typescript', 'Node.js', 'Express', 'Firebase'],
     github: 'https://github.com/seu-usuario/doefood',
     demo: '',
-    screenshots: [],
+    screenshots: ['/public/projects/doefood/img5.png', '/public/projects/doefood/img6.png','/public/projects/doefood/img7.png','/public/projects/doefood/img8.png'],
   },
   {
     slug: 'reciclaqui-2',

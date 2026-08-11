@@ -22,9 +22,18 @@ export default function Home() {
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-xl text-mist text-base sm:text-lg leading-relaxed">
-              {profile.bio}
-            </p>
+            <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-6">
+              <img
+                src={profile.photo}
+                alt={profile.name}
+                className="h-24 w-24 rounded-full border-2 border-signal/80 object-cover shadow-lg"
+                loading="eager"
+                decoding="async"
+              />
+              <p className="max-w-xl text-mist text-base sm:text-lg leading-relaxed">
+                {profile.bio}
+              </p>
+            </div>
           </Reveal>
           <Reveal delay={0.15}>
             <div className="mt-10 flex flex-wrap items-center gap-4">

@@ -1,14 +1,11 @@
-// ============================================================
-// EDITE ESTE ARQUIVO COM SEUS DADOS REAIS
-// Tudo o que aparece na página principal (página mestra) vem daqui.
-// ============================================================
+
 
 export const profile = {
   name: 'ThiagoDev',
   role: 'Desenvolvedor(a) Multiplataforma',
-  photo: 'profile.jpeg', // coloque sua foto em public/profile.jpg
+  photo: '/profile.jpeg',
   github: 'https://github.com/AraujoThiago0822',
-  linkedin: 'https://linkedin.com/in/seu-usuario', // opcional, deixe '' se não quiser mostrar
+  linkedin: 'https://linkedin.com/in/seu-usuario', 
   email: 'thiago.araujo0822@gmail.com',
   location: 'São Paulo, SP',
 

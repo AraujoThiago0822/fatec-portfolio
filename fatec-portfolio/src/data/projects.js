@@ -1,15 +1,9 @@
-// ============================================================
-// EDITE ESTE ARQUIVO COM OS DADOS REAIS DE CADA PROJETO
-// - "screenshots": coloque os arquivos em public/projects/<slug>/ e referencie aqui
-// - "github": link do repositório do projeto
-// - "semester": semestre em que o projeto foi feito (1 a 5)
-// ============================================================
 
 export const projects = [
   {
     slug: 'streetwise',
     semester: 1,
-    status: 'concluded', // 'concluded' | 'empty'
+    status: 'concluded', 
     name: 'StreetWise',
     tagline: 'Landing page para estúdio de tatuagem',
     description:
@@ -19,7 +13,7 @@ export const projects = [
     techs: ['HTML5', 'CSS3', 'JavaScript'],
     github: 'https://github.com/WebCrafters-ZL/streetwise-web',
     demo: '',
-    screenshots: ['/public/projects/streetwise/img1.png', '/public/projects/streetwise/img2.png'],
+    screenshots: ['/projects/streetwise/img1.PNG', '/projects/streetwise/img2.PNG'],
   },
   {
     slug: 'reciclaqui',
@@ -34,7 +28,7 @@ export const projects = [
     techs: ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'Express', 'MySQL'],
     github: 'https://github.com/WebCrafters-ZL/recicleaqui',
     demo: '',
-    screenshots: ['/public/projects/recicleaqui/img3.png'],
+    screenshots: ['/projects/recicleaqui/img3.png'],
   },
   {
     slug: 'academitrack',
@@ -48,10 +42,10 @@ export const projects = [
       'Desenvolvimento de interface,construção dos módulos de frequência e notas e dashboards de acompanhamento .',
     techs: ['React', 'Javascript', 'Node.js', 'MongoDB'],
     github: 'https://github.com/seu-usuario/academitrack',
+    githubFrontend: 'https://github.com/seu-usuario/academitrack-frontend',
+    githubBackend: 'https://github.com/seu-usuario/academitrack-backend',
     demo: '',
-    screenshots: ['/public/projects/academitrack/img4.png',
-
-    ],
+    screenshots: ['/projects/academitrack/img4.png'],
   },
   {
     slug: 'doefood',
@@ -65,8 +59,10 @@ export const projects = [
       'Desenvolvimento do fluxo de cadastro de doações, sistema de match entre doador e instituição, e painel de acompanhamento de doações.',
     techs: ['React','Typescript', 'Node.js', 'Express', 'Firebase'],
     github: 'https://github.com/seu-usuario/doefood',
+    githubFrontend: 'https://github.com/seu-usuario/doefood-frontend',
+    githubBackend: 'https://github.com/seu-usuario/doefood-backend',
     demo: '',
-    screenshots: ['/public/projects/doefood/img5.png', '/public/projects/doefood/img6.png','/public/projects/doefood/img7.png','/public/projects/doefood/img8.png'],
+    screenshots: ['/projects/doefood/img5.png', '/projects/doefood/img6.png', '/projects/doefood/img7.png', '/projects/doefood/img8.png'],
   },
   {
     slug: 'reciclaqui-2',
@@ -80,6 +76,9 @@ export const projects = [
       'Desenvolvimento do  painel administrativo desktop (relatórios e gestão de pontos de coleta) e integração com API backend .',
     techs: ['React Native', 'React', 'Node.js', 'PostgreSQL'],
     github: 'https://github.com/seu-usuario/reciclaqui-2',
+    githubFrontendMobile: 'https://github.com/seu-usuario/reciclaqui-2-mobile',
+    githubFrontendAdmin: 'https://github.com/seu-usuario/reciclaqui-2-admin',
+    githubBackend: 'https://github.com/seu-usuario/reciclaqui-2-backend',
     demo: '',
     screenshots: [],
   },

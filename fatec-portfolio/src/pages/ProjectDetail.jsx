@@ -1,8 +1,89 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Github, ExternalLink, ImageOff, User, X } from 'lucide-react'
 import { projects } from '../data/projects'
 import Reveal from '../components/Reveal'
+
+function MediaPreview({ src, index, projectSlug, projectName, variant, onClick }) {
+  const candidates = useMemo(() => {
+    const base = src && src.startsWith('/') ? src : `/projects/${projectSlug}/${src}`
+    const variants = [base]
+
+    const normalized = base.replace(/\\/g, '/')
+    const withoutLeading = normalized.replace(/^\//, '')
+    const pathWithoutExt = withoutLeading.replace(/\.(png|jpg|jpeg|mp4|webm|ogg)$/i, '')
+
+    if (normalized.toLowerCase().endsWith('.png')) {
+      variants.push(normalized.replace(/\.png$/i, '.PNG'))
+      variants.push(normalized.replace(/\.png$/i, '.jpg'))
+      variants.push(normalized.replace(/\.png$/i, '.jpeg'))
+    } else if (normalized.toLowerCase().endsWith('.jpg') || normalized.toLowerCase().endsWith('.jpeg')) {
+      variants.push(normalized.replace(/\.(jpg|jpeg)$/i, '.png'))
+      variants.push(normalized.replace(/\.(jpg|jpeg)$/i, '.PNG'))
+    }
+
+    if (projectSlug === 'reciclaqui-2') {
+      const folder = `/projects/${projectSlug}/`
+      const name = normalized.split('/').pop()
+      const nameWithoutExt = name.replace(/\.(png|jpg|jpeg|mp4|webm|ogg)$/i, '')
+      variants.push(`${folder}${nameWithoutExt}.png`)
+      variants.push(`${folder}${nameWithoutExt}.PNG`)
+      variants.push(`${folder}${nameWithoutExt}.jpg`)
+      variants.push(`${folder}${nameWithoutExt}.jpeg`)
+      variants.push(`${folder}${nameWithoutExt}.mp4`)
+    }
+
+    variants.push(`/${withoutLeading}`)
+    variants.push(`/${pathWithoutExt}.png`)
+    variants.push(`/${pathWithoutExt}.PNG`)
+
+    return [...new Set(variants)]
+  }, [projectSlug, src])
+
+  const [currentSrc, setCurrentSrc] = useState(candidates[0])
+  const [attempt, setAttempt] = useState(0)
+
+  useEffect(() => {
+    setCurrentSrc(candidates[0])
+    setAttempt(0)
+  }, [candidates])
+
+  const handleError = () => {
+    if (attempt + 1 < candidates.length) {
+      const next = candidates[attempt + 1]
+      setCurrentSrc(next)
+      setAttempt((prev) => prev + 1)
+    }
+  }
+
+  const isVideo = currentSrc.toLowerCase().endsWith('.mp4') || currentSrc.toLowerCase().endsWith('.webm') || currentSrc.toLowerCase().endsWith('.ogg')
+
+  if (isVideo) {
+    return (
+      <video
+        controls
+        preload="metadata"
+        playsInline
+        className={variant === 'lightbox' ? 'max-h-[78vh] w-full object-contain bg-void' : 'h-56 w-full object-cover'}
+        onError={handleError}
+      >
+        <source src={currentSrc} type="video/mp4" />
+        Seu navegador não suporta a reprodução de vídeo.
+      </video>
+    )
+  }
+
+  return (
+    <img
+      src={currentSrc}
+      alt={`Screenshot ${index + 1} de ${projectName}`}
+      className={variant === 'lightbox' ? 'max-h-[78vh] w-full object-contain' : 'h-56 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]'}
+      loading="lazy"
+      decoding="async"
+      onError={handleError}
+    />
+  )
+}
 
 export default function ProjectDetail() {
   const { slug } = useParams()
@@ -137,13 +218,7 @@ export default function ProjectDetail() {
                       className="group overflow-hidden rounded-xl border border-steel bg-void text-left shadow-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg"
                       aria-label={`Abrir screenshot ${index + 1} de ${project.name}`}
                     >
-                      <img
-                        src={src}
-                        alt={`Screenshot ${index + 1} de ${project.name}`}
-                        className="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                        loading="lazy"
-                        decoding="async"
-                      />
+                      <MediaPreview src={src} index={index} projectSlug={project.slug} projectName={project.name} variant="thumbnail" />
                     </button>
                   ))}
                 </div>
@@ -191,11 +266,7 @@ export default function ProjectDetail() {
               )}
 
               <div className="w-full overflow-hidden rounded-2xl border border-steel bg-void shadow-2xl">
-                <img
-                  src={project.screenshots[selectedImageIndex]}
-                  alt={`Screenshot ${selectedImageIndex + 1} de ${project.name}`}
-                  className="max-h-[78vh] w-full object-contain"
-                />
+                <MediaPreview src={project.screenshots[selectedImageIndex]} index={selectedImageIndex} projectSlug={project.slug} projectName={project.name} variant="lightbox" />
               </div>
 
               {project.screenshots.length > 1 && (

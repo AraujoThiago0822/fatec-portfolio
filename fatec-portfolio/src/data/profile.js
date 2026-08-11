@@ -5,7 +5,7 @@ export const profile = {
   role: 'Desenvolvedor(a) Multiplataforma',
   photo: '/profile.jpeg',
   github: 'https://github.com/AraujoThiago0822',
-  linkedin: 'https://linkedin.com/in/seu-usuario', 
+  linkedin: 'www.linkedin.com/in/thiago-araujo-2997b5288', 
   email: 'thiago.araujo0822@gmail.com',
   location: 'São Paulo, SP',
 

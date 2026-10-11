@@ -9,7 +9,7 @@ export const profile = {
   email: 'thiago.araujo0822@gmail.com',
   location: 'São Paulo, SP',
 
-  bio: 'Estudante de Desenvolvimento de Software Multiplataforma, apaixonado(a) por transformar problemas reais em produtos digitais — do frontend ao deploy. Gosto de projetos com impacto social e de código bem organizado.',
+  bio: 'Estudante de Desenvolvimento de Software Multiplataforma, apaixonado por transformar problemas reais em produtos digitais,do frontend ao deploy. Gosto de projetos com impacto social e de código bem organizado.',
 
   education: {
     institution: 'Fatec Zona Leste',

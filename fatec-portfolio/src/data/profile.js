@@ -21,23 +21,23 @@ export const profile = {
   // Deixe a lista vazia [] se ainda não tiver experiência profissional
   experience: [
     {
-      company: 'Nome da Empresa',
-      role: 'Estagiário(a) de Desenvolvimento',
-      startDate: '01/2025',
+      company: 'Calcont Contabiidade',
+      role: 'Estagiário de Banco de  Dados',
+      startDate: '08/2026',
       endDate: null, // null = emprego atual
       description:
-        'Descreva aqui suas atividades principais: quais sistemas você mantém, quais tecnologias usa no dia a dia e algum resultado que você entregou.',
+        'Sou responsável por auxiliar na modelagem, organização e manutenção do banco de dados do sistema contábil, garantindo a integridade, segurança e eficiência das informações. ',
     },
   ],
 
   courses: [
     {
-      name: 'Nome do curso de extensão',
-      institution: 'Instituição / plataforma',
+      name: 'Google Cloud',
+      institution: 'Google',
       location: 'Online',
       hours: 40,
       startDate: '03/2025',
-      endDate: '04/2025',
+      endDate: '06/2025',
     },
   ],
 

@@ -85,14 +85,15 @@ screenshots: ['/projects/recicleaqui-2/img9.png', '/projects/recicleaqui-2/img10
   {
     slug: 'projeto-6',
     semester: 6,
-    status: 'empty',
-    name: 'Em definição',
-    tagline: 'Projeto ainda não definido',
-    description: '',
-    myRole: '',
-    techs: [],
-    github: '',
+    status: 'in-progress',
+    name: 'CyberFlora',
+    tagline: 'Sistema multiplataforma de cultivo inteligente',
+    description:
+      'CyberFlora é um sistema multiplataforma de cultivo inteligente voltado ao gerenciamento de plantas e ambientes de cultivo indoor e estufas. A plataforma permite cadastrar e gerenciar plantas, organizar áreas de cultivo e integrar tecnologias de IoT para monitoramento, proporcionando maior controle, eficiência e praticidade no cuidado com as plantas.',
+    myRole: 'Desenvolvimento completo do projeto.',
+    techs: ['Kotlin', 'Spring Boot', 'PostgreSQL', 'Docker'],
+    github: 'https://github.com/AraujoThiago0822/cyberflora.git',
     demo: '',
-    screenshots: [],
+    screenshots: ['/projects/cyberflora/img12.png', '/projects/cyberflora/img13.png', '/projects/cyberflora/img14.png', '/projects/cyberflora/img15.png', '/projects/cyberflora/img16.png', '/projects/cyberflora/img17.png']
   },
 ]

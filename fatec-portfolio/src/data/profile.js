@@ -2,7 +2,7 @@
 
 export const profile = {
   name: 'ThiagoDev',
-  role: 'Desenvolvedor(a) Multiplataforma',
+  role: 'Desenvolvedor Multiplataforma',
   photo: '/profile.jpeg',
   github: 'https://github.com/AraujoThiago0822',
   linkedin: 'www.linkedin.com/in/thiago-araujo-2997b5288', 

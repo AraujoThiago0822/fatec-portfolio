@@ -79,7 +79,7 @@ Requisitos:
 | Git | qualquer versão recente |
 
 ```bash
-git clone [https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git](https://github.com/AraujoThiago0822/fatec-portfolio)
+git clone https://github.com/AraujoThiago0822/fatec-portfolio
 cd fatec-portfolio
 npm install
 npm run dev
